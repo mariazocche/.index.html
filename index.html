@@ -1,201 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REINOS NA BIOL</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Font Awesome para ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Animate.css para animações -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Os Reinos da Biologia</title>
     <style>
-        /* Efeito nos cards ao passar o mouse */
-        .card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #eef2f3, #8e9eab);
+            color: #333;
         }
-
+        header {
+            background: #4a90e2;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            width: 280px;
+            transition: transform 0.3s ease-in-out;
+        }
         .card:hover {
             transform: scale(1.05);
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
         }
-
-        /* Animação de enfeites no fundo */
-        .falling-leaves {
-            position: fixed;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: -1;
-            animation: fall 10s infinite linear;
+        .card h2 {
+            color: #4a90e2;
+            text-align: center;
         }
-
-        .falling-leaf {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: rgba(0, 128, 0, 0.5);
-            border-radius: 50%;
-            opacity: 0.6;
-            animation: fall 10s infinite linear;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-100px);
-                opacity: 0.7;
-            }
-
-            100% {
-                transform: translateY(100vh);
-                opacity: 0;
-            }
-        }
-
-        /* Enfeites de fundo adicionais (exemplo: bolhas ou estrelas) */
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://cdn.pixabay.com/photo/2015/08/23/14/51/milky-way-902017_960_720.jpg') no-repeat center center;
-            background-size: cover;
-            z-index: -1;
-            animation: starAnimation 50s infinite linear;
-        }
-
-        @keyframes starAnimation {
-            0% {
-                transform: translateY(0);
-            }
-
-            100% {
-                transform: translateY(100vh);
-            }
+        .card p {
+            font-size: 14px;
+            text-align: justify;
         }
     </style>
 </head>
-
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg" style="background-color: #7db671a2; color: #557a5aa4;">
-        <div class="container-fluid">
-            <a class="navbar-brand animate__animated animate__fadeIn animate__delay-1s" href="#" style="color: 047213a40;">Reinos Biológicos</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="background-color: #047213a4;"></span> <!-- Cor do ícone -->
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active animate__animated animate__fadeIn animate__delay-2s" aria-current="page" href="#" style="color: #047213a4;">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link animate__animated animate__fadeIn animate__delay-3s" href="#sobre" style="color: #126407a4;">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link animate__animated animate__fadeIn animate__delay-4s" href="#contato" style="color: #05581e;">Contato</a>
-                    </li>
-                </ul>
-            </div>
+    <header>Os Reinos da Biologia</header>
+    <div class="container">
+        <div class="card">
+            <h2>Reino Monera</h2>
+            <p>Inclui organismos unicelulares procariontes, como bactérias e arqueas.</p>
         </div>
-    </nav>
-
-    <!-- Container para os cards -->
-    <div class="container my-4">
-        <!-- Linha para organizar os cards -->
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <!-- Card 1 -->
-            <div class="col">
-                <div class="card border-primary animate__animated animate__fadeIn animate__delay-5s" style="width: 18rem;">
-                    <img src="https://vestibulares.estrategia.com/portal/wp-content/uploads/2023/02/sid-balachandran-_9a-3NO5KJE-unsplash-1200x1200.jpg" class="card-img-top" alt="Reino Animalia">
-                    <div class="card-body">
-                        <h5 class="card-title text-primary"><i class="fas fa-dog"></i> Reino Animalia</h5>
-                        <p class="card-text">O reino Animalia é o mais evoluído e se divide em dois grandes grupos: vertebrados e invertebrados.</p>
-                        <a href="#animalia.html" class="btn btn-outline-primary">Saiba mais</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 2 -->
-            <div class="col">
-                <div class="card border-success animate__animated animate__fadeIn animate__delay-6s" style="width: 18rem;">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtebqoTW5DW4Q2I-BNfVppDGDSiCxMT3TJxg&s" class="card-img-top" alt="Reino Plantae">
-                    <div class="card-body">
-                        <h5 class="card-title text-success"><i class="fas fa-leaf"></i> Reino Plantae</h5>
-                        <p class="card-text">As plantas são seres pluricelulares, eucariontes e autotróficos.</p>
-                        <a href="#plantae.html" class="btn btn-outline-success">Saiba mais</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 3 -->
-            <div class="col">
-                <div class="card border-danger animate__animated animate__fadeIn animate__delay-7s" style="width: 18rem;">
-                    <img src="https://www.windsorgreatpark.co.uk/wp-content/uploads/2023/09/Fly-agaric-fungi-scaled.jpg" class="card-img-top" alt="Reino Fungi">
-                    <div class="card-body">
-                        <h5 class="card-title text-danger"><i class="fas fa-spider"></i> Reino Fungi</h5>
-                        <p class="card-text">Fungos são eucariontes que incluem cogumelos, bolores e leveduras.</p>
-                        <a href="#fungi.html" class="btn btn-outline-danger">Saiba mais</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 4 -->
-            <div class="col">
-                <div class="card border-warning animate__animated animate__fadeIn animate__delay-8s" style="width: 18rem;">
-                    <img src="data:image/jpeg;base64,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" class="card-img-top" alt="Reino Protista">
-                    <div class="card-body">
-                        <h5 class="card-title text-warning"><i class="fas fa-bacteria"></i> Reino Protista</h5>
-                        <p class="card-text">Protistas são organismos eucariontes que não se encaixam nos outros reinos.</p>
-                        <a href="#protista.html" class="btn btn-outline-warning">Saiba mais</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Card 5 -->
-            <div class="col">
-                <div class="card border-info animate__animated animate__fadeIn animate__delay-9s" style="width: 18rem;">
-                    <img src="https://conceitos.com/wp-content/uploads/Reino-Monera.png" class="card-img-top" alt="Reino Monera">
-                    <div class="card-body">
-                        <h5 class="card-title text-info"><i class="fas fa-virus"></i> Reino Monera</h5>
-                        <p class="card-text">Monera inclui organismos com células procarióticas, como bactérias.</p>
-                        <a href="#monera.html" class="btn btn-outline-info">Saiba mais</a>
-                    </div>
-                </div>
-            </div>
+        <div class="card">
+            <h2>Reino Protista</h2>
+            <p>Organismos unicelulares eucariontes, como protozoários e algas.</p>
+        </div>
+        <div class="card">
+            <h2>Reino Fungi</h2>
+            <p>Composto por fungos, organismos heterotróficos como cogumelos e leveduras.</p>
+        </div>
+        <div class="card">
+            <h2>Reino Plantae</h2>
+            <p>Organismos autotróficos, como plantas e algas multicelulares.</p>
+        </div>
+        <div class="card">
+            <h2>Reino Animalia</h2>
+            <p>Inclui animais multicelulares heterotróficos, desde insetos até mamíferos.</p>
         </div>
     </div>
-
-    <!-- Seção Sobre -->
-    <div id="sobre" class="container my-4 animate__animated animate__fadeInUp animate__delay-10s">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="text-primary">Sobre os Reinos Biológicos</h2>
-                <p>Os reinos biológicos são categorias utilizadas para classificar todos os seres vivos. Existem cinco reinos principais: Animalia, Plantae, Fungi, Protista e Monera. Cada um desses reinos possui características únicas que os tornam distintos dos outros. Abaixo, fornecemos uma explicação detalhada sobre cada reino.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Seção Contato -->
-    <div id="contato" class="container my-4 animate__animated animate__fadeInUp animate__delay-11s">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="text-primary">Contato</h2>
-                <p><strong>Nome:</strong> Maria Vitoria Zocche</p>
-                <p><strong>Turma:</strong> 2B</p>
-                <p><strong>Professor:</strong> Alexandre</p>
-                <p><strong>Gmail:</strong> <a href="mailto:mariazocche@escola.pr.gov.br">maria.zocche@escola.pr.gov.br</a></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Rodapé -->
-    <footer style="background-color: #1c611fa2; color: #959c2b9f;" class="text-center py-3">
-        <p>&copy; 2025 Reinos Biológicos. Todos os direitos reservados.</p>
-    </footer>
-
 </body>
-
 </html>
