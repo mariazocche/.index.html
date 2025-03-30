@@ -1,77 +1,204 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Os Reinos da Biologia</title>
+    <title>REINOS NA BIOL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Animate.css para animações -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #eef2f3, #8e9eab);
-            color: #333;
-        }
-        header {
-            background: #4a90e2;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 24px;
-            font-weight: bold;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
+        /* Efeito nos cards ao passar o mouse */
         .card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin: 20px;
-            padding: 20px;
-            width: 280px;
-            transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .card:hover {
             transform: scale(1.05);
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
         }
-        .card h2 {
-            color: #4a90e2;
-            text-align: center;
+
+        /* Animação de enfeites no fundo */
+        .falling-leaves {
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            animation: fall 10s infinite linear;
         }
-        .card p {
-            font-size: 14px;
-            text-align: justify;
+
+        .falling-leaf {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-color: rgba(0, 128, 0, 0.5);
+            border-radius: 50%;
+            opacity: 0.6;
+            animation: fall 10s infinite linear;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Enfeites de fundo adicionais (exemplo: bolhas ou estrelas) */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://cdn.pixabay.com/photo/2015/08/23/14/51/milky-way-902017_960_720.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+            animation: starAnimation 50s infinite linear;
+        }
+
+        @keyframes starAnimation {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(100vh);
+            }
         }
     </style>
 </head>
+
 <body>
-    <header>Os Reinos da Biologia</header>
-    <div class="container">
-        <div class="card">
-            <h2>Reino Monera</h2>
-            <p>Inclui organismos unicelulares procariontes, como bactérias e arqueas.</p>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #7db671a2; color: #557a5aa4;">
+        <div class="container-fluid">
+            <a class="navbar-brand animate__animated animate__fadeIn animate__delay-1s" href="#" style="color: 047213a40;">Reinos Biológicos</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="background-color: #047213a4;"></span> <!-- Cor do ícone -->
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active animate__animated animate__fadeIn animate__delay-2s" aria-current="page" href="#" style="color: #047213a4;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated animate__fadeIn animate__delay-3s" href="#sobre" style="color: #126407a4;">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link animate__animated animate__fadeIn animate__delay-4s" href="#contato" style="color: #05581e;">Contato</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="card">
-            <h2>Reino Protista</h2>
-            <p>Organismos unicelulares eucariontes, como protozoários e algas.</p>
-        </div>
-        <div class="card">
-            <h2>Reino Fungi</h2>
-            <p>Composto por fungos, organismos heterotróficos como cogumelos e leveduras.</p>
-        </div>
-        <div class="card">
-            <h2>Reino Plantae</h2>
-            <p>Organismos autotróficos, como plantas e algas multicelulares.</p>
-        </div>
-        <div class="card">
-            <h2>Reino Animalia</h2>
-            <p>Inclui animais multicelulares heterotróficos, desde insetos até mamíferos.</p>
+    </nav>
+
+    <!-- Container para os cards -->
+    <div class="container my-4">
+        <!-- Linha para organizar os cards -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card border-primary animate__animated animate__fadeIn animate__delay-5s" style="width: 18rem;">
+                    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcertifiedhumanebrasil.org%2Fos-animais-sentem-sim-eles-tem-emocoes-dores-e-prazer%2F&psig=AOvVaw3otRA2i2jNsNuImHzFZndF&ust=1743462986977000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCNjGzv73sowDFQAAAAAdAAAAABAE" class="card-img-top" alt="Reino Animalia">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary"><i class="fas fa-dog"></i> Reino Animalia</h5>
+                        <p class="card-text">O Reino Animalia inclui organismos eucariontes, multicelulares e heterotróficos, como insetos, peixes, aves e mamíferos.</p>
+                        <a href="#animalia.html" class="btn btn-outline-primary">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card border-success animate__animated animate__fadeIn animate__delay-6s" style="width: 18rem;">
+                    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fterramagna.com.br%2Fblog%2Fplantas%2F&psig=AOvVaw3hOSKMON4D1WfB92x2UlNt&ust=1743463054438000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKjayZv4sowDFQAAAAAdAAAAABAE" class="card-img-top" alt="Reino Plantae">
+                    <div class="card-body">
+                        <h5 class="card-title text-success"><i class="fas fa-leaf"></i> Reino Plantae</h5>
+                        <p class="card-text">O Reino Plantae inclui organismos eucariontes, autotróficos e multicelulares, como árvores, flores e algas verdes.</p>
+                        <a href="#plantae.html" class="btn btn-outline-success">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card border-danger animate__animated animate__fadeIn animate__delay-7s" style="width: 18rem;">
+                    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.infoescola.com%2Fbiologia%2Freino-fungi%2F&psig=AOvVaw222k7XMvApb5HLxEoN4m7W&ust=1743463080996000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMjj0Kn4sowDFQAAAAAdAAAAABAE" class="card-img-top" alt="Reino Fungi">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger"><i class="fas fa-spider"></i> Reino Fungi</h5>
+                        <p class="card-text">O Reino Fungi é composto por organismos eucariontes, heterotróficos e decompositores, como cogumelos, leveduras e bolores.</p>
+                        <a href="#fungi.html" class="btn btn-outline-danger">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card border-warning animate__animated animate__fadeIn animate__delay-8s" style="width: 18rem;">
+                    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.todamateria.com.br%2Fdoencas-causadas-por-protozoarios%2F&psig=AOvVaw3Vy2qqXP1O4QunyPN07ehd&ust=1743463108660000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLinhcD4sowDFQAAAAAdAAAAABAE" class="card-img-top" alt="Reino Protista">
+                    <div class="card-body">
+                        <h5 class="card-title text-warning"><i class="fas fa-bacteria"></i> Reino Protista</h5>
+                        <p class="card-text">O Reino Protista inclui seres unicelulares e eucariontes, como protozoários e algas, que podem ser autótrofos ou heterótrofos.</p>
+                        <a href="#protista.html" class="btn btn-outline-warning">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="col">
+                <div class="card border-info animate__animated animate__fadeIn animate__delay-9s" style="width: 18rem;">
+                    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fbrasilescola.uol.com.br%2Fbiologia%2Fmonera.htm&psig=AOvVaw09vKIQmoD1ABBXijGC9ITz&ust=1743463270994000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCJDKjYX5sowDFQAAAAAdAAAAABAJ" class="card-img-top" alt="Reino Monera">
+                    <div class="card-body">
+                        <h5 class="card-title text-info"><i class="fas fa-virus"></i> Reino Monera</h5>
+                        <p class="card-text">O Reino Monera é formado por bactérias e arqueas, seres unicelulares e procariontes que vivem em diversos ambientes e podem ser autotróficos ou heterotróficos.</p>
+                        <a href="#monera.html" class="btn btn-outline-info">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <!-- Seção Sobre -->
+    <div id="sobre" class="container my-4 animate__animated animate__fadeInUp animate__delay-10s">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-primary">Sobre os Reinos Biológicos</h2>
+                <p>Os reinos biológicos são as grandes categorias em que os seres vivos são classificados com base em suas características celulares, modos de nutrição e organização corporal. Atualmente, a classificação mais tradicional divide os seres vivos em cinco reinos: Animalia, Plantae, Fungi, Protista e Monera. Cada um desses reinos possui características únicas que os tornam distintos dos outros. Abaixo, fornecemos uma explicação detalhada sobre cada reino.</p>
+                <p>Essa classificação pode variar, e alguns cientistas utilizam um sistema de seis reinos, separando as arqueas do Reino Monera em um grupo próprio. Além disso, há modelos mais modernos que utilizam os três domínios (Bacteria, Archaea e Eukarya) para complementar essa divisão.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Contato -->
+    <div id="contato" class="container my-4 animate__animated animate__fadeInUp animate__delay-11s">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-primary">Contato</h2>
+                <p><strong>Nome:</strong> Maria Vitoria Zocche</p>
+                <p><strong>Turma:</strong> 2B</p>
+                <p><strong>Professor:</strong> Alexandre</p>
+                <p><strong>Gmail:</strong> <a href="mailto:mariazocche@escola.pr.gov.br">maria.zocche@escola.pr.gov.br</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer style="background-color: #1c611fa2; color: #959c2b9f;" class="text-center py-3">
+        <p>&copy; 2025 Reinos Biológicos. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
+
 </html>
+
+
