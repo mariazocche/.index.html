@@ -4,11 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>REINOS BIOLÓGICOS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>REINOS DA BIOLOGIA</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Font Awesome para ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Animate.css para animações -->
@@ -17,8 +15,6 @@
         /* Efeito nos cards ao passar o mouse */
         .card {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            width: 14rem; /* Diminuindo o tamanho dos cards */
-            margin: 30px; /* Aumentando o espaço entre os cards */
         }
 
         .card:hover {
@@ -26,50 +22,79 @@
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
         }
 
-        /* Enfeites de fundo adicionais (exemplo: bolhas ou estrelas) */
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://cdn.pixabay.com/photo/2015/08/23/14/51/milky-way-902017_960_720.jpg') no-repeat center center;
-            background-size: cover;
-            z-index: -1;
-            animation: starAnimation 50s infinite linear;
+        /* Diminuir o tamanho dos cards */
+        .card {
+            width: 12rem;
         }
 
-        @keyframes starAnimation {
-            0% {
-                transform: translateY(0);
-            }
-
-            100% {
-                transform: translateY(100vh);
-            }
+        /* Centralizar os cards */
+        .card-deck {
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
 
 <body>
+        <!-- Navbar -->
+<!-- Primeira Navbar (fixa no topo esquerdo) -->
+<nav class="navbar bg-body-tertiary" style="position: absolute; top: 10px; left: 10px; width: auto;">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#" 
+           style="color: black; font-weight: bold; font-size: 20px; 
+                  background-color: #7FFF00; padding: 10px 50px; 
+                  border-radius: 5px;">
+            <img src="https://i.postimg.cc/NKhxKT5D/bnai-logo.png" alt="bnai-logo" 
+                 width="60" height="60" class="d-inline-block align-text-top">
+            BNai - Reinos Biológicos
+        </a>
+    </div>
+</nav>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg" style="background-color: #8ace00; color: #8ace00;">
-        <div class="container-fluid">
-            <a class="navbar-brand animate__animated animate__fadeIn animate__delay-1s" href="#" style="color: #556b2f;">Reinos Biológicos</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="background-color: #FFD700;"></span> <!-- Cor do ícone -->
+<!-- Segunda Navbar (Expansível e responsiva) -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-top: 80px;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Reinos</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sobre</a>
+        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contato</a>
+              </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Container para os cards -->
+<div class="container" style="padding-top: 120px;"> 
+    <!-- Linha para organizar os cards -->
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
+
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active animate__animated animate__fadeIn animate__delay-2s" aria-current="page" href="#" style="color: #22300B;">Home</a>
+                        <a class="nav-link active animate__animated animate__fadeIn animate__delay-2s" aria-current="page" href="#" style="color: #165f1fa4;">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link animate__animated animate__fadeIn animate__delay-3s" href="#sobre" style="color: #293B14;">Sobre</a>
+                        <a class="nav-link animate__animated animate__fadeIn animate__delay-3s" href="#sobre" style="color: #165f1fa4;">Sobre</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link animate__animated animate__fadeIn animate__delay-4s" href="#contato" style="color: #344D0E;">Contato</a>
+                        <a class="nav-link animate__animated animate__fadeIn animate__delay-4s" href="#contato" style="color: #165f1fa4;">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -79,94 +104,101 @@
     <!-- Container para os cards -->
     <div class="container my-4">
         <!-- Linha para organizar os cards -->
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-5"> <!-- Aumento do espaçamento com g-5 -->
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4">
             <!-- Card 1 -->
             <div class="col">
-                <div class="card border-danger animate__animated animate__fadeIn animate__delay-7s">
-                    <img src="https://certifiedhumanebrasil.org/wp-content/uploads/2019/02/CERTIFIED-HUMANE_Post-blog.jpg" class="card-img-top" alt="Reino Animalia">
+                <div class="card border-primary">
+                    <img src="https://vestibulares.estrategia.com/portal/wp-content/uploads/2023/02/sid-balachandran-_9a-3NO5KJE-unsplash-1200x1200.jpg" class="card-img-top" alt="Reino Animalia">
                     <div class="card-body">
-                        <h5 class="card-title text-primary">🦁Reino Animalia</h5>
-                        <p class="card-text">O Reino Animalia inclui organismos eucariontes, multicelulares e heterotróficos, como insetos, peixes, aves e mamíferos.</p>
-                        <a href="#animalia.html" class="btn btn-outline-primary">Saiba mais</a>
+                        <h5 class="card-title text-success">🦁 Reino Animalia</h5>
+                        <p class="card-text">O reino animalia, também chamado de reino animal ou reino metazoa, é um grupo de seres vivos pluricelulares, eucariontes e heterótrofos. Os animais são seres que não produzem seu próprio alimento, mas se nutrem de alimentos do meio em que vivem.</p>
+                        <a href="#sobre" class="btn btn-outline-primary">Saiba mais</a>
                     </div>
                 </div>
             </div>
+
             <!-- Card 2 -->
             <div class="col">
                 <div class="card border-success animate__animated animate__fadeIn animate__delay-6s">
-                    <img src="https://terramagna.com.br/wp-content/uploads/2022/09/Planta-jovem-luz-solar.jpg" class="card-img-top" alt="Reino Plantae">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtebqoTW5DW4Q2I-BNfVppDGDSiCxMT3TJxg&s" class="card-img-top" alt="Reino Plantae">
                     <div class="card-body">
                         <h5 class="card-title text-success">🌸Reino Plantae</h5>
-                        <p class="card-text">O Reino Plantae inclui organismos eucariontes, autotróficos e multicelulares, como árvores, flores e algas verdes.</p>
-                        <a href="#plantae.html" class="btn btn-outline-success">Saiba mais</a>
+                        <p class="card-text">O Reino Plantae, também chamado de Metaphyta, é composto por todos os organismos conhecidos como plantas ou vegetais. Estima-se que seja o primeiro grupo de habitantes pluricelulares a colonizar o ambiente terrestre.</p>
+                        <a href="#sobre" class="btn btn-outline-success">Saiba mais</a>
                     </div>
                 </div>
             </div>
+
             <!-- Card 3 -->
             <div class="col">
                 <div class="card border-danger animate__animated animate__fadeIn animate__delay-7s">
-                    <img src="https://www.infoescola.com/wp-content/uploads/2016/09/cogumelos_741648202.jpg" class="card-img-top" alt="Reino Fungi">
+                    <img src="https://www.windsorgreatpark.co.uk/wp-content/uploads/2023/09/Fly-agaric-fungi-scaled.jpg" class="card-img-top" alt="Reino Fungi">
                     <div class="card-body">
-                       <h5 class="card-title text-danger">🍄Reino Fungi</h5>
-                        <p class="card-text">O Reino Fungi é composto por organismos eucariontes, heterotróficos e decompositores, como cogumelos, leveduras e bolores.</p>
-                        <a href="#fungi.html" class="btn btn-outline-danger">Saiba mais</a>
+                        <h5 class="card-title text-success">🍄Reino Fungi</h5>
+                        <p class="card-text">O Reino Fungi é um grupo de organismos eucariontes que inclui os bolores, mofos, cogumelos e leveduras. São seres que podem ser microscópicos ou macroscópicos.</p>
+                        <a href="#sobre" class="btn btn-outline-danger">Saiba mais</a>
                     </div>
                 </div>
             </div>
+
             <!-- Card 4 -->
             <div class="col">
                 <div class="card border-warning animate__animated animate__fadeIn animate__delay-8s">
-                    <img src="https://s2.ppllstatics.com/diariovasco/www/multimedia/202005/05/media/cortadas/algas-kTQE-U1102337151e3C-1248x770@Diario%20Vasco.jpg" class="card-img-top" alt="Reino Protista">
+                    <img src="https://infoenem.com.br/wp-content/uploads/2015/12/protozoarios.jpg" class="card-img-top" alt="Reino Protista">
                     <div class="card-body">
-                       <h5 class="card-title text-warning">🦠Reino Protista</h5>
-                        <p class="card-text">O Reino Protista inclui seres unicelulares e eucariontes, como protozoários e algas, que podem ser autótrofos ou heterotrófos.</p>
-                        <a href="#protista.html" class="btn btn-outline-warning">Saiba mais</a>
+                        <h5 class="card-title text-success">🦠 Reino Protista</h5>
+                        <p class="card-text">O Reino Protista é o grupo formado pelos seres vivos eucariontes, autótrofos, heterótrofos e unicelulares. Integram esse reino as algas, protozoários e mixomicetos, que são seres vivos semelhantes aos fungos.</p>
+                        <a href="#sobre" class="btn btn-outline-warning">Saiba mais</a>
                     </div>
                 </div>
             </div>
+
             <!-- Card 5 -->
             <div class="col">
                 <div class="card border-info animate__animated animate__fadeIn animate__delay-9s">
-                    <img src="https://s4.static.brasilescola.uol.com.br/be/2024/08/bacteria-escherichia-coli.jpg" class="card-img-top" alt="Reino Monera">
+                    <img src="https://conceitos.com/wp-content/uploads/Reino-Monera.png" class="card-img-top" alt="Reino Monera">
                     <div class="card-body">
-                        <h5 class="card-title text-info">🔬Reino Monera</h5>
-                        <p class="card-text">O Reino Monera é formado por bactérias e arqueas, seres unicelulares e procariontes que vivem em diversos ambientes e podem ser autotróficos ou heterotróficos.</p>
-                        <a href="#monera.html" class="btn btn-outline-info">Saiba mais</a>
+                        <h5 class="card-title text-success">👾Reino Monera</h5>
+                        <p class="card-text">Monera inclui organismos com células procarióticas, como bactérias.</p>
+                        <a href="#sobre" class="btn btn-outline-info">Saiba mais</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Seção Sobre -->
-    <div id="sobre" class="container my-4 animate__animated animate__fadeInUp animate__delay-10s">
-        <div class="row">
-            <div class="color: #344D0E;">
-                <h2 class="text-primary">Sobre os Reinos Biológicos</h2>
-                <p>Os reinos biológicos são as grandes categorias em que os seres vivos são classificados com base em suas características celulares, modos de nutrição e organização corporal. Atualmente, a classificação mais tradicional divide os seres vivos em cinco reinos: Animalia, Plantae, Fungi, Protista e Monera. Cada um desses reinos possui características únicas que os tornam distintos dos outros. Abaixo, fornecemos uma explicação detalhada sobre cada reino.</p>
-                <p>Essa classificação pode variar, e alguns cientistas utilizam um sistema de seis reinos, separando as arqueas do Reino Monera em um grupo próprio. Além disso, há modelos mais modernos que utilizam os três domínios (Bacteria, Archaea e Eukarya) para complementar essa divisão.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Seção Contato -->
-    <div id="contato" class="container my-4 animate__animated animate__fadeInUp animate__delay-11s">
-        <div class="row">
-            <div class="color: #344D0E;">
-                <h2 class="text-primary">Contato</h2>
-                <p><strong>Nome:</strong> Maria Vitoria Zocche</p>
-                <p><strong>Turma:</strong> 2B</p>
-                <p><strong>Professor:</strong> Alexandre</p>
-                <p><strong>Gmail:</strong> <a href="mailto:mariazocche@escola.pr.gov.br">maria.zocche@escola.pr.gov.br</a></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Rodapé -->
-    <footer style="background-color: #8ace00; color: #000000;" class="text-center py-3">
-        <p>&copy; 2025 Reinos Biológicos. Todos os direitos reservados.</p>
-    </footer>
 
 </body>
 
 </html>
+
+     <!-- Seção Sobre -->
+     <div id="sobre" class="container my-4 animate__animated animate__fadeInUp animate__delay-10s">
+         <div class="row">
+             <div class="col-12">
+                 <h2 class="text-primary">Sobre os Reinos Biológicos</h2>
+                 <p>Os reinos biológicos são categorias utilizadas para classificar todos os seres vivos. Existem cinco reinos principais: Animalia, Plantae, Fungi, Protista e Monera. Cada um desses reinos possui características únicas que os tornam distintos dos outros. Abaixo, fornecemos uma explicação detalhada sobre cada reino.</p>
+             </div>
+         </div>
+     </div>
+ 
+     <!-- Seção Contato -->
+     <div id="contato" class="container my-4 animate__animated animate__fadeInUp animate__delay-11s">
+         <div class="row">
+             <div class="col-12">
+                 <h2 class="text-primary">Contato</h2>
+                 <p><strong>Nome:</strong> Maria Vitoria Zocche</p>
+                 <p><strong>Turma:</strong> 2B</p>
+                 <p><strong>Professor:</strong> Alexandre</p>
+                 <p><strong>Gmail:</strong> <a href="mailto:mariana.retcheski@escola.pr.gov.br">maria.zocche@escola.pr.gov.br</a></p>
+             </div>
+         </div>
+     </div>
+ 
+     <!-- Rodapé -->
+     <footer style="background-color: #1c611fa2; color: #959c2b9f;" class="text-center py-3">
+         <p>&copy; 2025 Reinos Biológicos. Todos os direitos reservados.</p>
+     </footer>
+ 
+ </body>
+ 
+ </html>
