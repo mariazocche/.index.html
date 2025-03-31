@@ -36,47 +36,28 @@
 </head>
 
 <body>
-        <!-- Navbar -->
-<!-- Primeira Navbar (fixa no topo esquerdo) -->
-<nav class="navbar bg-body-tertiary" style="position: absolute; top: 10px; left: 10px; width: auto;">
-    <div class="container-fluid">
+ <!-- Fundo verde atrás da navbar e logo -->
+<div style="background-color: #7FFF00; width: 100%; height: 80px; position: absolute; top: 0; left: 0; z-index: -1;"></div>
+
+<!-- Navbar -->
+<nav class="navbar bg-body-tertiary" style="position: absolute; top: 10px; left: 10px; width: auto; display: flex; align-items: center;">
+    <div class="container-fluid d-flex align-items-center">
         <a class="navbar-brand d-flex align-items-center" href="#" 
            style="color: black; font-weight: bold; font-size: 20px; 
-                  background-color: #7FFF00; padding: 10px 50px; 
-                  border-radius: 5px;">
+                  padding: 10px 50px; border-radius: 5px;">
             <img src="https://i.postimg.cc/NKhxKT5D/bnai-logo.png" alt="bnai-logo" 
                  width="60" height="60" class="d-inline-block align-text-top">
             BNai - Reinos Biológicos
         </a>
+        
+        <!-- Botões "Sobre" e "Contato" -->
+        <div class="ms-3">
+            <a href="#sobre" class="btn btn-outline-dark me-2">Sobre</a>
+            <a href="#contato" class="btn btn-outline-dark">Contato</a>
+        </div>
     </div>
 </nav>
 
-<!-- Segunda Navbar (Expansível e responsiva) -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-top: 80px;">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Reinos</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Sobre</a>
-        </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
-              </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
 
 
 <!-- Container para os cards -->
@@ -88,7 +69,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active animate__animated animate__fadeIn animate__delay-2s" aria-current="page" href="#" style="color: #165f1fa4;">Home</a>
+                        <a class="nav-link active animate__animated animate__fadeIn animate__delay-2s" aria-current="page" href="#" style="color: #165f1fa4;">Bnai-project</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link animate__animated animate__fadeIn animate__delay-3s" href="#sobre" style="color: #165f1fa4;">Sobre</a>
@@ -111,8 +92,8 @@
                     <img src="https://vestibulares.estrategia.com/portal/wp-content/uploads/2023/02/sid-balachandran-_9a-3NO5KJE-unsplash-1200x1200.jpg" class="card-img-top" alt="Reino Animalia">
                     <div class="card-body">
                         <h5 class="card-title text-success">🦁 Reino Animalia</h5>
-                        <p class="card-text">O reino animalia, também chamado de reino animal ou reino metazoa, é um grupo de seres vivos pluricelulares, eucariontes e heterótrofos. Os animais são seres que não produzem seu próprio alimento, mas se nutrem de alimentos do meio em que vivem.</p>
-                        <a href="#sobre" class="btn btn-outline-primary">Saiba mais</a>
+                        <p class="card-text">O Reino Animalia inclui seres multicelulares, eucariontes e heterotróficos, como invertebrados e vertebrados, com grande diversidade e complexidade.                        </p>
+                        <a href="animalia.html" class="btn btn-outline-primary">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -123,7 +104,7 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtebqoTW5DW4Q2I-BNfVppDGDSiCxMT3TJxg&s" class="card-img-top" alt="Reino Plantae">
                     <div class="card-body">
                         <h5 class="card-title text-success">🌸Reino Plantae</h5>
-                        <p class="card-text">O Reino Plantae, também chamado de Metaphyta, é composto por todos os organismos conhecidos como plantas ou vegetais. Estima-se que seja o primeiro grupo de habitantes pluricelulares a colonizar o ambiente terrestre.</p>
+                        <p class="card-text">O Reino Plantae inclui seres multicelulares, eucariontes e autótrofos, como árvores, flores e algas, essenciais para a produção de oxigênio e a cadeia alimentar.</p>
                         <a href="#sobre" class="btn btn-outline-success">Saiba mais</a>
                     </div>
                 </div>
@@ -135,7 +116,7 @@
                     <img src="https://www.windsorgreatpark.co.uk/wp-content/uploads/2023/09/Fly-agaric-fungi-scaled.jpg" class="card-img-top" alt="Reino Fungi">
                     <div class="card-body">
                         <h5 class="card-title text-success">🍄Reino Fungi</h5>
-                        <p class="card-text">O Reino Fungi é um grupo de organismos eucariontes que inclui os bolores, mofos, cogumelos e leveduras. São seres que podem ser microscópicos ou macroscópicos.</p>
+                        <p class="card-text">O Reino Fungi inclui organismos eucariontes como cogumelos, leveduras e mofos. Eles são decompositores essenciais na natureza, obtendo nutrientes por absorção.</p>
                         <a href="#sobre" class="btn btn-outline-danger">Saiba mais</a>
                     </div>
                 </div>
@@ -147,7 +128,7 @@
                     <img src="https://infoenem.com.br/wp-content/uploads/2015/12/protozoarios.jpg" class="card-img-top" alt="Reino Protista">
                     <div class="card-body">
                         <h5 class="card-title text-success">🦠 Reino Protista</h5>
-                        <p class="card-text">O Reino Protista é o grupo formado pelos seres vivos eucariontes, autótrofos, heterótrofos e unicelulares. Integram esse reino as algas, protozoários e mixomicetos, que são seres vivos semelhantes aos fungos.</p>
+                        <p class="card-text">O Reino Protista é formado por organismos eucariontes, unicelulares ou multicelulares simples, como protozoários e algas. Possuem grande diversidade e podem ser autótrofos ou heterótrofos.</p>
                         <a href="#sobre" class="btn btn-outline-warning">Saiba mais</a>
                     </div>
                 </div>
@@ -159,7 +140,7 @@
                     <img src="https://conceitos.com/wp-content/uploads/Reino-Monera.png" class="card-img-top" alt="Reino Monera">
                     <div class="card-body">
                         <h5 class="card-title text-success">👾Reino Monera</h5>
-                        <p class="card-text">Monera inclui organismos com células procarióticas, como bactérias.</p>
+                        <p class="card-text">O Reino Monera inclui organismos unicelulares procariontes, como bactérias e cianobactérias. Eles podem ser autotróficos ou heterotróficos e estão presentes em diversos ambientes, desempenhando papéis essenciais na natureza.</p>
                         <a href="#sobre" class="btn btn-outline-info">Saiba mais</a>
                     </div>
                 </div>
@@ -176,7 +157,7 @@
          <div class="row">
              <div class="col-12">
                  <h2 class="text-primary">Sobre os Reinos Biológicos</h2>
-                 <p>Os reinos biológicos são categorias utilizadas para classificar todos os seres vivos. Existem cinco reinos principais: Animalia, Plantae, Fungi, Protista e Monera. Cada um desses reinos possui características únicas que os tornam distintos dos outros. Abaixo, fornecemos uma explicação detalhada sobre cada reino.</p>
+                 <p>Os reinos biológicos são categorias utilizadas na biologia para classificar os seres vivos de acordo com suas características estruturais, funcionais e evolutivas. Atualmente, a classificação mais aceita divide os seres vivos em cinco reinos principais. Eles também atuam ajudando os cientistas a organizar e compreender melhor a biodiversidade da Terra. Essa classificação evoluiu ao longo do tempo e pode continuar sendo ajustada com novas descobertas científicas.</p>
              </div>
          </div>
      </div>
@@ -189,7 +170,7 @@
                  <p><strong>Nome:</strong> Maria Vitoria Zocche</p>
                  <p><strong>Turma:</strong> 2B</p>
                  <p><strong>Professor:</strong> Alexandre</p>
-                 <p><strong>Gmail:</strong> <a href="mailto:mariana.retcheski@escola.pr.gov.br">maria.zocche@escola.pr.gov.br</a></p>
+                 <p><strong>Gmail:</strong> <a href="mailto:maria.zocche@escola.pr.gov.br">maria.zocche@escola.pr.gov.br</a></p>
              </div>
          </div>
      </div>
